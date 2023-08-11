@@ -1,3 +1,5 @@
+import Output from './Output';
+
 interface FormOutputProps {
   onSaveValue: {
     totalPrice: string;
@@ -21,44 +23,45 @@ const FormOutput: React.FC<FormOutputProps> = ({ onSaveValue }) => {
   );
   const processingFee = seventy * 0.07;
 
-  const addComma = (num: number): string => {
-    return num.toLocaleString('en-US');
-  };
-
+  const amount = [
+    {
+      value: Number(totalPrice),
+      text: 'Total Price:',
+    },
+    {
+      value: Number(thirty),
+      text: '30% Downpayment',
+    },
+    {
+      value: Number(seventy),
+      text: '70% Downpayment:',
+    },
+    {
+      value: Number(oneyear),
+      text: '1 year Installment:',
+    },
+    {
+      value: Number(twoyear),
+      text: '2 year Installment:',
+    },
+    {
+      value: Number(threeyear),
+      text: '3 year Installment:',
+    },
+    {
+      value: Number(fouryear),
+      text: '4 year Installment:',
+    },
+    {
+      value: Number(processingFee),
+      text: 'Processing Fee (7%):',
+    },
+  ];
   return (
     <div className="rouned border-2 border-slate-700 p-[1em] w-full">
-      <p>
-        Total Price:
-        <br /> <span className="font-bold">{addComma(Number(totalPrice))}</span>
-      </p>
-      <p>
-        30% Downpayment:
-        <br /> <span className="font-bold"> {addComma(thirty)}</span>
-      </p>
-      <p>
-        70% Financing Amount:
-        <br /> <span className="font-bold"> {addComma(seventy)}</span>
-      </p>
-      <p>
-        1 year Installment:
-        <br /> <span className="font-bold">{addComma(oneyear)}</span>
-      </p>
-      <p>
-        2 year Installment:
-        <br /> <span className="font-bold"> {addComma(twoyear)}</span>
-      </p>
-      <p>
-        3 year Installment:
-        <br /> <span className="font-bold"> {addComma(threeyear)}</span>
-      </p>
-      <p>
-        4 year Installment:
-        <br /> <span className="font-bold"> {addComma(fouryear)}</span>
-      </p>
-      <p>
-        Processing Fee (7%):
-        <br /> <span className="font-bold"> {addComma(processingFee)}</span>
-      </p>
+      {amount.map((amount, index) => (
+        <Output key={index} amount={amount.value} text={amount.text} />
+      ))}
     </div>
   );
 };
