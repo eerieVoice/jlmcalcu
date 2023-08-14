@@ -39,7 +39,7 @@ const FormInput = () => {
 
   return (
     <>
-      <div className="max-w-sm mx-auto text-lg min-h-screen">
+      <div className="max-w-sm mx-auto text-lg mb-[5rem]">
         <form onSubmit={formHandler} className="flex flex-col gap-[1em]">
           <div className="flex flex-col">
             <label className="uppercase font-semibold">Total Price</label>

@@ -41,7 +41,7 @@ const CustomDownPayment = () => {
     setSelected(options[1].value);
   };
   return (
-    <div className="max-w-sm mx-auto text-lg min-h-screen">
+    <div className="max-w-sm mx-auto text-lg">
       <form onSubmit={formHandler} className="flex flex-col gap-[1em]">
         <input
           type="number"

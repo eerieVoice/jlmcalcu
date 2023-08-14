@@ -30,11 +30,11 @@ const FormOutput: React.FC<FormOutputProps> = ({ onSaveValue }) => {
     },
     {
       value: Number(thirty),
-      text: '30% Downpayment',
+      text: '30% Down Payment',
     },
     {
       value: Number(seventy),
-      text: '70% Downpayment:',
+      text: '70% to be Financed:',
     },
     {
       value: Number(oneyear),
