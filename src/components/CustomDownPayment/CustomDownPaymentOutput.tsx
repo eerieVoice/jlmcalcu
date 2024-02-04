@@ -25,9 +25,9 @@ const CustomDownPaymentOutput: React.FC<FormOutputProps> = ({
   const threeyear = Number(
     ((tobeFinanced * (select * 3) + tobeFinanced) / 36).toFixed(2)
   );
-  const fouryear = Number(
-    ((tobeFinanced * (0.015 * 12 * 4) + tobeFinanced) / 48).toFixed(2)
-  );
+  // const fouryear = Number(
+  //   ((tobeFinanced * (0.015 * 12 * 4) + tobeFinanced) / 48).toFixed(2)
+  // );
   const processingFee = tobeFinanced * 0.07;
 
   const amount = [
@@ -55,10 +55,10 @@ const CustomDownPaymentOutput: React.FC<FormOutputProps> = ({
       value: Number(threeyear),
       text: '3 year Installment:',
     },
-    {
-      value: Number(fouryear),
-      text: '4 year Installment:',
-    },
+    // {
+    //   value: Number(fouryear),
+    //   text: '4 year Installment:',
+    // },
     {
       value: Number(processingFee),
       text: 'Processing Fee (7%):',

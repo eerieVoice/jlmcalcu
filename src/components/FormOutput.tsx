@@ -18,9 +18,9 @@ const FormOutput: React.FC<FormOutputProps> = ({ onSaveValue }) => {
   const threeyear = Number(
     ((seventy * (select * 3) + seventy) / 36).toFixed(2)
   );
-  const fouryear = Number(
-    ((seventy * (0.015 * 12 * 4) + seventy) / 48).toFixed(2)
-  );
+  // const fouryear = Number(
+  //   ((seventy * (0.015 * 12 * 4) + seventy) / 48).toFixed(2)
+  // );
   const processingFee = seventy * 0.07;
 
   const amount = [
@@ -48,10 +48,10 @@ const FormOutput: React.FC<FormOutputProps> = ({ onSaveValue }) => {
       value: Number(threeyear),
       text: '3 year Installment:',
     },
-    {
-      value: Number(fouryear),
-      text: '4 year Installment:',
-    },
+    // {
+    //   value: Number(fouryear),
+    //   text: '4 year Installment:',
+    // },
     {
       value: Number(processingFee),
       text: 'Processing Fee (7%):',
